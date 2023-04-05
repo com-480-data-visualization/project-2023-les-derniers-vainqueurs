@@ -57,3 +57,18 @@ Please, fill the following sections about your project.
 - < 24h: 80% of the grade for the milestone
 - < 48h: 70% of the grade for the milestone
 
+## Environment Setup
+
+Open up terminal (e.g. anaconda prompt) to the project directory. If not, type and run:
+```
+cd PROJECT_DIRECTORY
+```
+If you are running on Windows terminals, sometimes it is needed to switch disks, in this case, run: (suppose we are at C: and wishes to switch to D:)
+```
+cd /d D:
+```
+After switching to the project directory, run:
+```
+conda env create -f environment.yml -n YOUR_ENV_NAME
+```
+This could take a while.
