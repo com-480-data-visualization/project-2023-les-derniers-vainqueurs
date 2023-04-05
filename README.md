@@ -10,12 +10,7 @@
 
 ## Milestone 1 (23rd April, 5pm)
 
-**10% of the final grade**
 
-This is a preliminary milestone to let you set up goals for your final project and assess the feasibility of your ideas.
-Please, fill the following sections about your project.
-
-*(max. 2000 characters per section)*
 
 ### Dataset
 
@@ -80,7 +75,7 @@ Every Pokemon could take 1 to 3 ```abilities```. Therea are in total 295 abiliti
 
 To see the interactive plot, please kindly visit our [Data Analysis Pipeline](./DataAnalysisPipeline.ipynb)
 
-Every Pokemon coule take 1 to 2 ```Type``` different type and type combinations have different defense against other type and type combinations. As demonstration we plot the size of different types here.
+Every Pokemon coule take 1 to 2 ```Type```, different type and type combinations have different defense against other type and type combinations. As demonstration we plot the size of different types here.
 
 ![alt text](/img/milestone1/Types.png "types")
 To see the interactive plot, please kindly visit our [Data Analysis Pipeline](./DataAnalysisPipeline.ipynb)
@@ -89,10 +84,12 @@ To see the interactive plot, please kindly visit our [Data Analysis Pipeline](./
 ### Related work
 
 
-> - What others have already done with the data?
-> - Why is your approach original?
-> - What source of inspiration do you take? Visualizations that you found on other websites or magazines (might be unrelated to your data).
-> - In case you are using a dataset that you have already explored in another context (ML or ADA course, semester project...), you are required to share the report of that work to outline the differences with the submission for this class.
+We have looked into what others have done with the datasets to get inspiration. On a basic level, there are many visualisations on the basic attributes of Pokemons (e.g. height, weight, count for different species, legendary Pokemon with their total points, top Pokemons with their attack value, etc.). Further, people have explored more interesting questions: Is there correlation between the speed of Pokemon and other base factors? How many Pokemons are there in each generation? What is the relationship between type and catch rate? What is the capture rate by generation and by primary type? Which type is the most likely to be a legendary Pokemon? How many abilities does one Pokemon have? How are attributes correlated? Of course, we always want to find out which Pokemon is the strongest and which is the weakest. There is analysis on this question by summing up all the base statistics. We also came across one project on Pokemon classification with supervised learning using our chosen datasets, which is quite intriguing. 
+
+Our project has a different objective compared with the work we encountered. We would like to combine several datasets to better serve our purpose since each dataset has a different focus. Our objective is to offer Pokemon players information about how to better choose Pokemon and their abilities through visualisation. This way, without diving into all the technical information, players can learn about which pokemon to choose and which the best ability is very easily and thoroughly. 
+
+Our inspiration came from our passion about the game. There are nine generations of Pokemon and various types of them. Each species has so many attributes. The datasets are complete and very versatile. We were excited to explore the datasets and see what coems up. The exploration is also meaningful since we think about the actual game-playing so that there is a general direction that leads us.
+
 
 ## Milestone 2 (7th May, 5pm)
 
