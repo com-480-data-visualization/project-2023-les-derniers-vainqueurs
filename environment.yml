@@ -157,6 +157,7 @@ dependencies:
   - zlib=1.2.13=h8cc25b3_0
   - zstd=1.5.2=h19a0ad4_0
   - pip:
+    - kaleido==0.2.1
     - plotly==4.14.3
     - beautifulsoup4==4.11.1
     - blis==0.7.9
