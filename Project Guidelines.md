@@ -8,6 +8,7 @@
 │  .gitignore
 │  environment.yml
 │  DataAnalysisPipeline.ipynb
+│  Project Guidelines.md
 │
 ├─img
 │  │
