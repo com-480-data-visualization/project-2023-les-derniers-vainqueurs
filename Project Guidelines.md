@@ -71,7 +71,7 @@
   - 解决merge conflict（如果有）
 - ```git push origin MY_BRANCH```
 - 现在，代码已经在github上的对应branch里面了。
-- 切换到对应branch，点击```Compare & pull request```
+- 在github的repo上切换到对应branch，点击```Compare & pull request```
 - 填写对应信息，生成pull request.
 - 确认无误，点击```Merge pull request```
 - 现在，代码会出现在master上面。
