@@ -107,8 +107,9 @@ Our inspiration came from our passion about the game. There are nine generations
 - < 48h: 70% of the grade for the milestone
 
 ## Environment Setup
+You must have Anaconda or Miniconda installed.
 
-Open up terminal (e.g. anaconda prompt) to the project directory. If not, type and run:
+Open up terminal (for Windows users, Anaconda Prompt) to the project directory. If not, type and run:
 ```
 cd PROJECT_DIRECTORY
 ```
@@ -118,6 +119,6 @@ cd /d D:
 ```
 After switching to the project directory, run:
 ```
-conda env create -f environment.yml -n YOUR_ENV_NAME
+conda env create -f environment.yml
 ```
 This could take a while.
