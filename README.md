@@ -31,9 +31,18 @@ Cleaned data are stored at ```./data``` as well.
 
 ### Problematic
 
-> Frame the general topic of your visualization and the main axis that you want to develop.
-> - What am I trying to show with my visualization?
-> - Think of an overview for the project, your motivation, and the target audience.
+The visualization is targeted for Pokemon game lovers to help them form a strong pokemon combination for combat.
+
+We want to find what exactly determines the tier of pokemons in the pokemon competitions so that we can make a better recommendation. Generally, a pokemon is considered stronger if the sum of its 6 parameters(HP, Normal Attack, Normal Defense, Special Attack, Special Defense and Speed) is higher. However, many pokemons with not so high sum are used more frequently in the game. Therefore, we need to consider far more than just the sum of the 6 parameters.
+
+First, we need to find which parameter is the most determining parameter in pokemon competitions. We should find this by looking into the most frequently used pokemons(in the dataset, it relates to the OU in Tier). We need to compare pokemons in OU tier with those in other tiers to find the most crucial parameter. 
+
+Then, we should define the effective sum of 6 parameters. Different pokemons undertake different roles in a game. So they may not need every parameter. For example, we need pokemon A and B to become normal attackers in a game, so A and B do not need the parameter "Special Attack". The effective parameters are the other 5 parameters for both A and B. Therefore, if the sum of the 6 parameters of A is 520 while that of B is 500, but the special attack of A is 100 while that of B is 20, then it will be reasonable to believe B is stronger than A due to a better assignment of the parameters. The definition of the effective rate will change for different roles of pokemons. For those pokemons with speed less than 50, the effective sum is defined as (total-speed), while for other pokemons we treat them as either a Normal Attacker or a Special Attacker. For Normal Attackers, their effective sum is defined as (total – special attack) while for Special Attackers the definition is (total – normal attack). We can visualize whether a pokemon with higher effective sum of 6 parameters tends to be more frequently used.
+
+Besides, we need to find the best abilities for pokemons so that if a pokemon has a good ability, we can believe it has the potential to be stronger. We can use the pokemons in higher tier, for example, tier OU, to do the research. We need to find the most frequently used abilities and show them in a diagram.
+
+Finally, we should find which combinations of two types of a pokemon have the best defense against all moves. When a pokemon is attacked by other pokemons’ move, if its type is resistant to the type of move, it will be able to lose less HP. Therefore, a good combination of types provides a better defense. Similarly, we can also find the combinations of types that serves as the best attacker as well.
+
 
 ### Exploratory Data Analysis
 
