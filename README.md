@@ -104,6 +104,47 @@ Our inspiration came from our passion about the game. There are nine generations
 
 **10% of the final grade**
 
+#### What are the useful abilities?
+In this section we are interested in what are the *abilities* of interest we want to recommend to pokemon users.
+
+Every Pokemon could take 1 to 3 *abilities*. Therea are in total 295 abilities. However when during combat, a pokemon could only choose one ability to battle. As a demonstration we plot the ability distribution of pokemons
+
+![alt text](/img/milestone1/ability_distribution "ability distribution")
+
+It is therefore import to choose an ability wisely as it's directly linked to a strong pokemon.
+
+##### How do we rank abilities?
+
+Every Pokemon has an attribute *Tier*, it takes the following different values: ```['PU', 'LC', 'NU', 'Uber', 'RU', 'UUBL', 'UU', 'OU', 'PUBL',
+'NUBL', 'RUBL', 'Limbo']```, among them, ```OU``` means the pokemon is the most used. We will therefore rank ablities in terms of the frequentcy appeared in the ```OU``` Tier.
+
+We already have a result:
+|    | Ability           |   Count |
+|---:|:------------------|--------:|
+| 46 | 'Telepathy'       |       4 |
+|  1 | 'Regenerator'     |       4 |
+|  5 | 'Beast Boost'     |       3 |
+| 29 | 'Levitate'        |       2 |
+| 40 | 'Keen Eye'        |       2 |
+| 33 | 'Sturdy'          |       2 |
+| 22 | 'Limber'          |       2 |
+| 12 | 'Mold Breaker'    |       2 |
+| 19 | 'Battle Bond'     |       2 |
+|  8 | 'Serene Grace'    |       2 |
+|  4 | 'Pressure'        |       2 |
+| 38 | 'Disguise'        |       1 |
+
+For the sake of visualization, we are thinking about creating a horizontal sliding bar which contains the top 5 most popular abilities. Inside of the sliding bar there are 5 different icons symboling each ablity. When the mouse moves onto each icon, detailed information of the ability will be shown. This could be implemented with simple engineering.
+
+![alt text](/img/milestone2/img_abi.jpg "ability distribution")
+
+The visualization require certain courses like javascript, d3.js, html(of course).
+
+The mvp is the above viz. To further implement something more, we need to refer to different viz to see what better styling / fancy things we could do, they include:
+- Finding the fancy icons. (Otherwise hand-draw)
+- Choosing the right styling of the feature
+- Vaguing the icon upon the mouse moving onto it, could probably be done with some smart CSS configurations.
+- etc.
 
 ## Milestone 3 (4th June, 5pm)
 
