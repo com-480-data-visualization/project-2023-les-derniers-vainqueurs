@@ -104,6 +104,8 @@ Our inspiration came from our passion about the game. There are nine generations
 
 **10% of the final grade**
 
+Our website is [here](https://paddler2022.github.io/).
+
 ### Basic factors that determines pokemons' strength：natures
 
 Each Pokémon has its own 6 basic **natures**: HP, Attack, Defense, Special Attack, Special Defense and Speed. It is obivious to believe that a pokemon with higher natures is likely to perform better in the battles. In this section, we are intended to find the relation between the usage rate(Tier) and the natures of pokemons. Our ultimate goal is to present a relation between the natures and Tier and visualize it with interaction.
@@ -113,9 +115,13 @@ It is common to believe the total of 6 basic natures reveals a pokemon's power. 
 
 <img src="img/milestone2/Average_Total_by_Tier.png"/>
 
+#### See the distribution of each nature
+
 Then we can visualize the median of heat map of the natures using seaborn like:
 
 <img src="img/milestone2/Median_by_Tier.png"/>
+
+#### Define the effective total
 
 We also want to see which side(offense or defense) of battles players are more likely to emphasize. Generally, we only want a pokemon to become either an Attacker or a Special Attacker, so the offensive will be either Attack or Special Attack plus Speed that determines the sequence of moves. Therefore, we define offense total as "max[Attack, Special Attack] + Speed". For defense side, we define defense total as "Defense + Special Defense + HP". The implementation method is the same as "Average total".We can also combine both defense total and offense total and define the sum of them as "Effective total". And it is shown as below:
 
