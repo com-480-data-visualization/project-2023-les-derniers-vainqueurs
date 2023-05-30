@@ -1,3 +1,4 @@
+[Website](https://tachi-67.github.io/pokemon-data-story/) | [Website Repository](https://github.com/Tachi-67/pokemon-data-story) | [Process Book](TODO) | [Screencast](TODO)
 # Project of Data Visualization (COM-480)
 
 | Student's name | SCIPER |
@@ -215,25 +216,11 @@ The mvp is the above viz. To further implement something more, we need to refer 
 
 **80% of the final grade**
 
+[Website](https://tachi-67.github.io/pokemon-data-story/) | [Website Repository](https://github.com/Tachi-67/pokemon-data-story) | [Process Book](TODO) | [Screencast](TODO)
+
 
 ## Late policy
 
 - < 24h: 80% of the grade for the milestone
 - < 48h: 70% of the grade for the milestone
 
-## Environment Setup
-You must have Anaconda or Miniconda installed.
-
-Open up terminal (for Windows users, Anaconda Prompt) to the project directory. If not, type and run:
-```
-cd PROJECT_DIRECTORY
-```
-If you are running on Windows terminals, sometimes it is needed to switch disks, in this case, run: (suppose we are at C: and wishes to switch to D:)
-```
-cd /d D:
-```
-After switching to the project directory, run:
-```
-conda env create -f environment.yml
-```
-This could take a while.
