@@ -104,6 +104,70 @@ Our inspiration came from our passion about the game. There are nine generations
 
 **10% of the final grade**
 
+Our website is [here](https://paddler2022.github.io/).
+
+### Basic factors that determines pokemons' strength：natures
+
+Each Pokémon has its own 6 basic **natures**: HP, Attack, Defense, Special Attack, Special Defense and Speed. It is obivious to believe that a pokemon with higher natures is likely to perform better in the battles. In this section, we are intended to find the relation between the usage rate(Tier) and the natures of pokemons. Our ultimate goal is to present a relation between the natures and Tier and visualize it with interaction.
+
+#### Total of natures
+It is common to believe the total of 6 basic natures reveals a pokemon's power. A higher of total number is, a stronger pokemon is revealed. Therefore, we want to visualize the relation between Tier and the total as follows. We can see it almost meets our expectations. In later implementation, the chart will be replaced by the dynamic one that allows interaction created by plotly or other tools.
+
+<img src="img/milestone2/Average_Total_by_Tier.png"/>
+
+#### See the distribution of each nature
+
+Then we can visualize the median of heat map of the natures using seaborn like:
+
+<img src="img/milestone2/Median_by_Tier.png"/>
+
+#### Define the effective total
+
+We also want to see which side(offense or defense) of battles players are more likely to emphasize. Generally, we only want a pokemon to become either an Attacker or a Special Attacker, so the offensive will be either Attack or Special Attack plus Speed that determines the sequence of moves. Therefore, we define offense total as "max[Attack, Special Attack] + Speed". For defense side, we define defense total as "Defense + Special Defense + HP". The implementation method is the same as "Average total".We can also combine both defense total and offense total and define the sum of them as "Effective total". And it is shown as below:
+
+<img src="img/milestone2/Average_Effective_Total_by_Tier.png"/>
+
+
+
+
+
+### Which types of pokemons should be recommended to use?
+Each Pokemon has a primary type (type1) and maybe a secondary type (type2). Possible types are grass, water, fire, normal, electric, etc. For every type, there is an against_type value. For instance, there are columns in our dataset called ‘against_bug’, ‘against_dark’, ‘against_fairy’, and ‘against_flying. These values measure the amount of damage taken against an attack of a particular type. Note that the smaller the against values are, the better. Thus, these against values actually measure effectiveness. We hope the designers to treat every type of pokemon fairly. However, this is simply a dream from players. Unfortunately, pokemon designers have a certain preference on certain kind of pokemons. Therefore, it is natural to ask: which type is the strongest? Which combination of types is the strongest? In this sections we want to find this preference and then use **the chosen one** to win the pokemon battles.
+
+#### Primary types illustration
+
+To begin with, we want to examine how prevalent each primary type is. From Figure below, you can tell that a larger area means there is more of this type.We are envisioning an interaction where you can click a rectangle (a type), and all Pokemons of this type appear. We may use D3 to implement this later. 
+
+<img src="img/milestone2/type_frequency.png"/>
+
+#### Count the combinations of two types
+
+Now we explore the primary and secondary types. In Figure 2,  we illustrate the count of each type as primary type and secondary type using a barchart. We are thinking about adding interaction to the plot so that when you toggle over a bar (e.g. flying and type1), the corresponding names of Pokemon will pop up. We can use D3 or Python’s Plotly to do this.
+
+<img src="img/milestone2/By_primary_seconary.jpg"/>
+
+Then we look at the combination of Pokemon types. From Figure 3, we can tell that the most common Pokemon type combination is ‘Normal_Flying’. This plot is useful for our further analysis. 
+
+<img src="img/milestone2/most_common_types_combinations.jpg"/>
+
+#### Show the effectiveness of different types
+
+Moreover, we plot a heatmap demonstrating each type with its corresponding effectiveness against every other type (Figure 4). The lower the value, the better. Here, we apply the knowledge about color and perception we learned in class. Bigger values correspond to darker colors. We try to choose colors that are pleasing for the eyes and easy to comprehend.
+
+<img src="img/milestone2/effectiveness_chart.jpg"/>
+
+#### Choose the type combination which has the best "against" effectiveness
+
+At last, we can find out which pair of types has the best overall effectiveness. We add up all the against columns to represent the overall effectiveness. It turns out ‘Steel_Fairy’ has the best overall effectiveness (See Figure 5). 
+
+<img src="img/milestone2/types_combinations.jpg"/>
+
+The above is various pieces of information that we extracted from the dataset. We want to integrate them into one or two graphs to tell a whole story. One idea is that when a Pokemon player look at our website, he/she can learn which secondary type to choose for a given primary type.  
+
+
+
+
+### A research on abilities
 #### What are the useful abilities?
 In this section we are interested in what are the *abilities* of interest we want to recommend to pokemon users.
 
@@ -115,8 +179,8 @@ It is therefore import to choose an ability wisely as it's directly linked to a 
 
 ##### How do we rank abilities?
 
-Every Pokemon has an attribute *Tier*, it takes the following different values: ```['PU', 'LC', 'NU', 'Uber', 'RU', 'UUBL', 'UU', 'OU', 'PUBL',
-'NUBL', 'RUBL', 'Limbo']```, among them, ```OU``` means the pokemon is the most used. We will therefore rank ablities in terms of the frequentcy appeared in the ```OU``` Tier.
+Every Pokemon has an attribute *Tier*, it takes the following different values: ```['PU', 'LC', 'NU', 'Uber', 'RU', 'UUBL', 'UU', 'OU', 'PUBL','AG'
+'NUBL', 'RUBL', 'Limbo']```, among them, except for 'Uber', 'Limbo' and 'AG' which are banned using, ```OU``` means the pokemon is the most used. We will therefore rank ablities in terms of the frequentcy appeared in the ```OU``` Tier.
 
 We already have a result:
 |    | Ability           |   Count |
@@ -138,6 +202,7 @@ For the sake of visualization, we are thinking about creating a horizontal slidi
 
 ![alt text](/img/milestone2/img_abi.jpg "ability distribution")
 
+### Visualization Methods
 The visualization require certain courses like javascript, d3.js, html(of course).
 
 The mvp is the above viz. To further implement something more, we need to refer to different viz to see what better styling / fancy things we could do, they include:
