@@ -13,8 +13,8 @@
 │  │
 │  ├─milestone1
 │  │      ...pictures
-|  ├─milestone2
-|  |      ...pictures
+|  └─milestone2
+|         ...pictures
 │
 │
 └─data
