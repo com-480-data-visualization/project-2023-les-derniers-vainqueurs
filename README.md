@@ -6,6 +6,7 @@
 │  .gitignore
 │  environment.yml
 │  DataAnalysisPipeline.ipynb
+│  Screencast.mp4
 │  
 │
 ├─img
