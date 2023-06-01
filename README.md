@@ -216,7 +216,7 @@ The mvp is the above viz. To further implement something more, we need to refer 
 
 **80% of the final grade**
 
-[Website](https://tachi-67.github.io/pokemon-data-story/) | [Website Repository](https://github.com/Tachi-67/pokemon-data-story) | [Process Book](TODO) | [Screencast](TODO)
+[Website](https://tachi-67.github.io/pokemon-data-story/) | [Website Repository](https://github.com/Tachi-67/pokemon-data-story) | [Process Book]([TODO](https://github.com/com-480-data-visualization/project-2023-les-derniers-vainqueurs/blob/master/ProcessBook.pdf)) | [Screencast](TODO)
 
 
 ## Late policy
